@@ -32,6 +32,25 @@ import org.omg.CORBA.TIMEOUT;
 public class TwiMLModule {
 
     /**
+     * The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
+     * all verb elements must be nested within this element. Any other structure is considered invalid.
+     *
+     * @return A TwiML-based markup document containing the response element.
+     * @throws Exception
+     */
+    @Processor
+    public String response(@Optional ProcessorCallback innerProcessor) throws Exception {
+        StringBuilder builder = new StringBuilder();
+        builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        builder.append("<Response>\n");
+
+        builder.append(innerProcessor.process().toString());
+        builder.append("\n</Response>");
+
+        return builder.toString();
+    }
+
+    /**
      * The Say verb converts text to speech that is read back to the caller. <Say> is useful for development or saying dynamic text that is difficult to pre-record.
      * <p/>
      * {@sample.xml ../../../doc/mule-module-twiml.xml.sample twiml:say}
@@ -217,7 +236,7 @@ public class TwiMLModule {
                          @Optional @Default("5") int timeout,
                          @Optional @Default("#") String finishOnKey,
                          @Optional @Default("3600") int maxLength,
-                         @Optional @Default("true") boolean shouldTranscribe,
+                         @Optional @Default("false") boolean shouldTranscribe,
                          @Optional HttpCallback transcribe,
                          @Optional @Default("true") boolean playBeep) {
         StringBuilder builder = new StringBuilder();
