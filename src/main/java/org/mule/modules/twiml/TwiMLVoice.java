@@ -1,5 +1,8 @@
 package org.mule.modules.twiml;
 
+/**
+ * Voice gender
+ */
 public enum TwiMLVoice {
     MAN("man"),
     WOMAN("woman");

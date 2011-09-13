@@ -28,4 +28,29 @@
         <twiml:say>Thank You</twiml:say>
     </flow>
 
+    <flow name="testRecord">
+        <twiml:record action-flow-ref="testOnRecord" timeout="5"/>
+    </flow>
+
+    <flow name="testOnRecord">
+        <twiml:say>Thank You for that lovely message</twiml:say>
+    </flow>
+
+    <flow name="testSms">
+        <twiml:sms to="+14152292004" from="+14152292004" action-flow-ref="testOnRecord">Thank You for that lovely message</twiml:sms>
+    </flow>
+
+    <!--
+    <flow name="ivr">
+        <twiml:say>Thank you for calling MuleSoft.</twiml:say>
+        <twiml:gather timeout="6" finishOnKey="#" numDigits="8" action-flow-ref="findCase">
+            <twiml:say>Please enter your case number.</twiml:say>
+        </twiml:gather>
+    </flow>
+
+    <flow name="findCase">
+        <logger message="Searching for case #[header:INBOUND:digits]"/>
+        <twiml:
+    </flow> -->
+
 </mule>

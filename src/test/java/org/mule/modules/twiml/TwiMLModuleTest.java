@@ -57,6 +57,11 @@ public class TwiMLModuleTest extends FunctionalTestCase {
         runFlow("testGather");
     }
 
+    @Test
+    public void testRecord() throws Exception {
+        runFlow("testRecord");
+    }
+
     /**
      * Run the flow specified by name
      *

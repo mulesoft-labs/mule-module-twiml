@@ -1,0 +1,23 @@
+<!-- BEGIN_INCLUDE(twiml:say) -->
+<twiml:say voice="WOMAN" lang="ENGLISH">Hello World!</twiml:say>
+<!-- END_INCLUDE(twiml:say) -->
+<!-- BEGIN_INCLUDE(twiml:play) -->
+<twiml:play file="http://myapp.muleion.com/file.mp3"/>
+<!-- END_INCLUDE(twiml:play) -->
+<!-- BEGIN_INCLUDE(twiml:gather) -->
+<twiml:gather action-flow-ref="myflow" timeout="5" finishOnKey="#" numDigits="4">
+    <twiml:say>Please enter your account number, followed by the pound sign</twiml:say>
+</twiml:gather>
+<!-- END_INCLUDE(twiml:gather) -->
+<!-- BEGIN_INCLUDE(twiml:record) -->
+<twiml:say>Please leave a message at the beep</twiml:say>
+<twiml:record action-flow-ref="myflow" maxLength="20" finishOnKey="*"/>
+<!-- END_INCLUDE(twiml:record) -->
+<!-- BEGIN_INCLUDE(twiml:sms) -->
+<twiml:sms>Store Location: 123 Easy St</twiml:sms>
+<!-- END_INCLUDE(twiml:sms) -->
+<!-- BEGIN_INCLUDE(twiml:dial) -->
+<twiml:dial action-flow-ref="dialCallStatus">
+    415-123-4567
+</twiml:dial>
+<!-- END_INCLUDE(twiml:dial) -->

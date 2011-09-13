@@ -1,52 +1,58 @@
+TwiML Module
+===========
 
-WELCOME
-=======
-Congratulations you have just created a new Mule Cloud connector!
+A Mule module for generating Twilios Markup Language. Twilio can handle instructions for calls and SMS messages in real
+time from iON applications. When an SMS or incoming call is received, Twilio looks up the iON app associated with the
+phone number called and makes a request to it. iON will respond to the request and that response will decides how the
+call should proceed by returning a Twilio Markup XML (TwiML) document telling Twilio to say text to the caller, send
+an SMS message, play audio files, get input from the keypad, record audio, connect the call to another phone and more.
 
-Now you need to make sure that you update you pom.xml to use version
-3.1.2 of Mule. This will ensure you are compiling against the correct
-version of Mule and you will avoid issues arising from not being about to find
-configuration schemas for this module.
+TwiML is similar to HTML. Just as HTML is rendered in a browser to display a webpage, TwiML is 'rendered' by Twilio
+to the caller. Only one TwiML document is rendered to the caller at once but many documents can be linked together
+to build complex interactive voice applications.
 
-This wizard created a number of new classes and resources useful for Mule
-cloud connectors.  Each of the created files contains documentation and TODO
-items where necessary.  Here is an overview of what was created.
+Outgoing calls are controlled in the same manner as incoming calls using TwiML. The initial flow for the call is
+provided as a parameter to the Twilio Cloud Connector.
 
-./pom.xml:
-A maven project descriptor that describes how to build this module. It also
-contains  additional information about how to share the connector on MuleForge.
+Installation
+------------
 
-./assembly.xml:
-A maven assembly descriptor that defines how this module will be packaged
-when you make a release.
+The module can either be installed for all applications running within the Mule instance or can be setup to be used
+for a single application.
 
-./LICENSE.txt:
-The open source license text for this project.
+*All Applications*
 
-TESTING
-=======
+Download the module from the link above and place the resulting jar file in
+/lib/user directory of the Mule installation folder.
 
-This  project also contains test classes that can be run as part of a test
-suite.
+*Single Application*
 
-ADDITIONAL RESOURCES
-====================
-Everything you need to know about getting started with Mule can be found here:
-http://www.mulesoft.org/documentation/display/MULE3INTRO/Home
+To make the module available only to single application then place it in the
+lib directory of the application otherwise if using Maven to compile and deploy
+your application the following can be done:
 
-There further useful information about extending Mule here:
-http://www.mulesoft.org/documentation/display/MULE3USER/Introduction+to+Extending+Mule
+Add the connector's maven repo to your pom.xml:
 
-For information about working with Mule inside and IDE with maven can be
-found here:
-http://www.mulesoft.org/documentation/display/MULE3INTRO/Setting+Up+Eclipse
+    <repositories>
+        <repository>
+            <id>mulesoft-snapshots</id>
+            <name>MuleForge Snapshot Repository</name>
+            <url>https://repository.mulesoft.org/snapshots/</url>
+            <layout>default</layout>
+        </repsitory>
+    </repositories>
 
-Remember if you get stuck you can try getting help on the Mule user list:
-http://www.mulesoft.org/email-lists
+Add the connector as a dependency to your project. This can be done by adding
+the following under the dependencies element in the pom.xml file of the
+application:
 
-Also, MuleSoft, the company behind Mule, offers 24x7 support options:
-http://www.mulesoft.com/enterprise-subscriptions-and-support
+    <dependency>
+        <groupId>org.mule.modules</groupId>
+        <artifactId>mule-module-twiml</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
 
-Enjoy your Mule ride!
+Usage
+-----
 
-The Mule Team
+TwiML supports the following
