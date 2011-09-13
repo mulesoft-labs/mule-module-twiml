@@ -27,8 +27,8 @@ import org.omg.CORBA.TIMEOUT;
  * @author MuleSoft, Inc.
  */
 @Module(name = "twiml",
-        namespace = "http://repository.mulesoft.org/releases/org/mule/modules/twiml/mule-module-twiml",
-        schemaLocation = "http://repository.mulesoft.org/releases/org/mule/modules/twiml/mule-module-twiml/1.0/mule-twiml.xsd")
+        namespace = "http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml",
+        schemaLocation = "http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml/1.0/mule-twiml.xsd")
 public class TwiMLModule {
 
     /**
