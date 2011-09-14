@@ -1,13 +1,13 @@
 package org.mule.modules.twiml;
 
 import org.mule.api.annotations.Module;
+import org.mule.api.annotations.NestedProcessor;
 import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.callback.HttpCallback;
-import org.mule.api.annotations.callback.ProcessorCallback;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
-import org.mule.modules.twiml.config.spring.SayDefinitionParser;
-import org.omg.CORBA.TIMEOUT;
+
+import java.util.List;
 
 /**
  * A Mule module for generating Twilios Markup Language. Twilio can handle instructions for calls and SMS messages in
@@ -39,12 +39,14 @@ public class TwiMLModule {
      * @throws Exception
      */
     @Processor
-    public String response(@Optional ProcessorCallback innerProcessor) throws Exception {
+    public String response(@Optional List<NestedProcessor> nestedProcessors) throws Exception {
         StringBuilder builder = new StringBuilder();
         builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         builder.append("<Response>\n");
 
-        builder.append(innerProcessor.process().toString());
+        for( NestedProcessor nestedProcessor : nestedProcessors ) {
+            builder.append(nestedProcessor.process().toString());
+        }
         builder.append("\n</Response>");
 
         return builder.toString();
@@ -59,14 +61,13 @@ public class TwiMLModule {
      * @param lang  The 'language' attribute allows you pick a voice with a specific language's accent and pronunciations. Twilio currently supports languages English, Spanish, French and German. The default is 'English'.
      * @param voice The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.
      * @param loop  The 'loop' attribute specifies how many times you'd like the text repeated. The default is once. Specifying '0' will cause the the Say verb to loop until the call is hung up.
-     *
      * @return TwiML-based markup representing the Say operation
      */
     @Processor
     public String say(@Optional TwiMLLanguage lang,
                       @Optional TwiMLVoice voice,
                       @Optional @Default("1") int loop,
-                      @Optional ProcessorCallback innerProcessor) throws Exception {
+                      @Optional List<NestedProcessor> nestedProcessors) throws Exception {
         StringBuilder builder = new StringBuilder();
         builder.append("<Say");
         if (lang != null) {
@@ -84,7 +85,9 @@ public class TwiMLModule {
         builder.append("\"");
         builder.append(">");
 
-        builder.append(innerProcessor.process().toString());
+        for( NestedProcessor nestedProcessor : nestedProcessors ) {
+            builder.append(nestedProcessor.process().toString());
+        }
         builder.append("</Say>");
 
         return builder.toString();
@@ -158,7 +161,6 @@ public class TwiMLModule {
      *                       the data to the 'action' flow once the caller enters that number of digits. For example, one might set
      *                       'numDigits' to '5' and ask the caller to enter a 5 digit zip code. When the caller enters the fifth digit
      *                       of '94117', Twilio will immediately submit the data to the 'action' flow.
-     * @param innerProcessor
      * @return TwiML-based markup representing the Gather operation
      */
     @Processor
@@ -166,7 +168,7 @@ public class TwiMLModule {
                          @Optional @Default("5") int timeout,
                          @Optional @Default("#") String finishOnKey,
                          @Optional Integer numDigits,
-                         @Optional ProcessorCallback innerProcessor) throws Exception {
+                         @Optional List<NestedProcessor> nestedProcessors) throws Exception {
 
         StringBuilder builder = new StringBuilder();
         builder.append("<Gather");
@@ -189,7 +191,9 @@ public class TwiMLModule {
         builder.append("\"");
         builder.append(">");
 
-        builder.append(innerProcessor.process().toString());
+        for( NestedProcessor nestedProcessor : nestedProcessors ) {
+            builder.append(nestedProcessor.process().toString());
+        }
         builder.append("</Say>");
 
         return builder.toString();
@@ -295,7 +299,7 @@ public class TwiMLModule {
                       @Optional String from,
                       @Optional String to,
                       @Optional HttpCallback status,
-                      @Optional ProcessorCallback innerProcessor) throws Exception {
+                      @Optional List<NestedProcessor> nestedProcessors) throws Exception {
 
         StringBuilder builder = new StringBuilder();
         builder.append("<Sms");
@@ -318,8 +322,9 @@ public class TwiMLModule {
             builder.append("\"");
         }
 
-        builder.append(innerProcessor.process().toString());
-
+        for( NestedProcessor nestedProcessor : nestedProcessors ) {
+            builder.append(nestedProcessor.process().toString());
+        }
         builder.append("</Sms>");
 
         return builder.toString();
@@ -329,46 +334,41 @@ public class TwiMLModule {
      * The <Dial> verb connects the current caller to an another phone. If the called party picks up, the two parties
      * are connected and can communicate until one hangs up. If the called party does not pick up, if a busy signal
      * is received, or if the number doesn't exist, the dial verb will finish.
-     *
+     * <p/>
      * When the dialed call ends, Twilio makes a request to the 'action' flow if provided. Call flow will continue
      * using the TwiML received in response to that request.
-     *
+     * <p/>
      * {@sample.xml ../../../doc/mule-module-twiml.xml.sample twiml:dial}
      * {@sample.java ../../../doc/mule-module-twiml.java.sample twiml:dial}
      *
-     * @param action The 'action' attribute takes a flow as an argument. When the dialed call ends, Twilio will make
-     * a request to this flow. If you provide an 'action' flow, Twilio will continue the current call after the dialed
-     * party has hung up, using the TwiML received in your response to the 'action' URL request. Any TwiML verbs
-     * occuring after a <Dial> which specifies an 'action' attribute are unreachable.
-     *
-     * If no 'action' is provided, Dial will finish and Twilio will move on to the next TwiML verb in the document. If
-     * there is no next verb, Twilio will end the phone call. Note that this is different from the behavior of
-     * <Record> and <Gather>.
-     *
-     * @param timeout The 'timeout' attribute sets the limit in seconds that <Dial> waits for the called party to
-     * answer the call. Basically, how long should Twilio let the call ring before giving up and reporting 'no-answer'
-     * as the 'DialCallStatus'.
-     *
+     * @param action       The 'action' attribute takes a flow as an argument. When the dialed call ends, Twilio will make
+     *                     a request to this flow. If you provide an 'action' flow, Twilio will continue the current call after the dialed
+     *                     party has hung up, using the TwiML received in your response to the 'action' URL request. Any TwiML verbs
+     *                     occuring after a <Dial> which specifies an 'action' attribute are unreachable.
+     *                     <p/>
+     *                     If no 'action' is provided, Dial will finish and Twilio will move on to the next TwiML verb in the document. If
+     *                     there is no next verb, Twilio will end the phone call. Note that this is different from the behavior of
+     *                     <Record> and <Gather>.
+     * @param timeout      The 'timeout' attribute sets the limit in seconds that <Dial> waits for the called party to
+     *                     answer the call. Basically, how long should Twilio let the call ring before giving up and reporting 'no-answer'
+     *                     as the 'DialCallStatus'.
      * @param hangupOnStar The 'hangupOnStar' attribute lets the calling party hang up on the called party by pressing
-     * the '*' key on his phone. When two parties are connected using <Dial>, Twilio blocks execution of further verbs
-     * until the caller or called party hangs up. This feature allows the calling party to hang up on the called party
-     * without having to hang up her phone and ending her TwiML processing session. When the caller presses '*' Twilio
-     * will hang up on the called party. If an 'action' URL was provided, Twilio submits 'completed' as the
-     * 'DialCallStatus' to the URL and processes the response. If no 'action' was provided Twilio will continue on to
-     * the next verb in the current TwiML document.
-     *
-     * @param timeLimit The 'timeLimit' attribute sets the maximum duration of the <Dial> in seconds. For example, by
-     * setting a time limit of 120 seconds <Dial> will hang up on the called party automatically two minutes into
-     * the phone call. By default, there is a four hour time limit set on calls.
-     *
-     * @param callerId The 'callerId' attribute lets you specify the caller ID that will appear to the called party
-     * when Twilio calls. By default, when you put a <Dial> in your TwiML response to Twilio's inbound call request,
-     * the caller ID that the dialed party sees is the inbound caller's caller ID.
-     *
-     * For example, an inbound caller to your Twilio number has the caller ID 1-415-123-4567. You tell Twilio to
-     * execute a <Dial> verb to 1-858-987-6543 to handle the inbound call. The called party (1-858-987-6543) will
-     * see 1-415-123-4567 as the caller ID on the incoming call.
-     *
+     *                     the '*' key on his phone. When two parties are connected using <Dial>, Twilio blocks execution of further verbs
+     *                     until the caller or called party hangs up. This feature allows the calling party to hang up on the called party
+     *                     without having to hang up her phone and ending her TwiML processing session. When the caller presses '*' Twilio
+     *                     will hang up on the called party. If an 'action' URL was provided, Twilio submits 'completed' as the
+     *                     'DialCallStatus' to the URL and processes the response. If no 'action' was provided Twilio will continue on to
+     *                     the next verb in the current TwiML document.
+     * @param timeLimit    The 'timeLimit' attribute sets the maximum duration of the <Dial> in seconds. For example, by
+     *                     setting a time limit of 120 seconds <Dial> will hang up on the called party automatically two minutes into
+     *                     the phone call. By default, there is a four hour time limit set on calls.
+     * @param callerId     The 'callerId' attribute lets you specify the caller ID that will appear to the called party
+     *                     when Twilio calls. By default, when you put a <Dial> in your TwiML response to Twilio's inbound call request,
+     *                     the caller ID that the dialed party sees is the inbound caller's caller ID.
+     *                     <p/>
+     *                     For example, an inbound caller to your Twilio number has the caller ID 1-415-123-4567. You tell Twilio to
+     *                     execute a <Dial> verb to 1-858-987-6543 to handle the inbound call. The called party (1-858-987-6543) will
+     *                     see 1-415-123-4567 as the caller ID on the incoming call.
      * @return TwiML-based markup representing the Dial operation
      */
     @Processor
@@ -377,10 +377,10 @@ public class TwiMLModule {
                        @Optional @Default("false") boolean hangupOnStar,
                        @Optional @Default("14400") int timeLimit,
                        @Optional String callerId,
-                       ProcessorCallback innerProcessor) throws Exception {
+                       List<NestedProcessor> nestedProcessors) throws Exception {
         StringBuilder builder = new StringBuilder();
         builder.append("<Dial");
-        if( action != null ) {
+        if (action != null) {
             builder.append(" action=\"");
             builder.append(action.getUrl());
             builder.append("\"");
@@ -394,14 +394,15 @@ public class TwiMLModule {
         builder.append(" timeLimit=\"");
         builder.append(Integer.toString(timeLimit));
         builder.append("\"");
-        if( callerId != null ) {
+        if (callerId != null) {
             builder.append(" callerId=\"");
             builder.append(callerId);
             builder.append("\"");
         }
 
-        builder.append(innerProcessor.process().toString());
-
+        for( NestedProcessor nestedProcessor : nestedProcessors ) {
+            builder.append(nestedProcessor.process().toString());
+        }
         builder.append("</Dial>");
 
         return builder.toString();
