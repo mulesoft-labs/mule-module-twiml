@@ -1,5 +1,5 @@
-REST Module
-===========
+Mule TwiML Module
+=================
 
 A Mule module for generating Twilios Markup Language. Twilio can handle instructions for calls and SMS messages in
 real time from iON applications. When an SMS or incoming call is received, Twilio looks up the iON app associated
