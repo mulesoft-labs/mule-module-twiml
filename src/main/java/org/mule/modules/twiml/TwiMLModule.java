@@ -6,8 +6,10 @@ import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.callback.HttpCallback;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
+import org.mule.api.annotations.param.OutboundHeaders;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * A Mule module for generating Twilios Markup Language. Twilio can handle instructions for calls and SMS messages in
@@ -39,7 +41,10 @@ public class TwiMLModule {
      * @throws Exception
      */
     @Processor
-    public String response(@Optional List<NestedProcessor> nestedProcessors) throws Exception {
+    public String response(@Optional List<NestedProcessor> nestedProcessors, @OutboundHeaders Map<String, Object> map) throws Exception {
+
+        map.put("Content-Type", "application/xml; charset=UTF-8");
+
         StringBuilder builder = new StringBuilder();
         builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         builder.append("<Response>\n");
@@ -194,7 +199,7 @@ public class TwiMLModule {
         for( NestedProcessor nestedProcessor : nestedProcessors ) {
             builder.append(nestedProcessor.process().toString());
         }
-        builder.append("</Say>");
+        builder.append("</Gather>");
 
         return builder.toString();
     }
