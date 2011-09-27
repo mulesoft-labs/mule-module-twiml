@@ -23,7 +23,7 @@ package org.mule.modules.twiml;
 import org.junit.Test;
 import org.mule.api.MuleContext;
 import org.mule.api.MuleEvent;
-import org.mule.construct.SimpleFlowConstruct;
+import org.mule.construct.Flow;
 import org.mule.tck.AbstractMuleTestCase;
 import org.mule.tck.FunctionalTestCase;
 import org.mule.transport.http.HttpConnector;
@@ -68,7 +68,7 @@ public class TwiMLModuleTest extends FunctionalTestCase {
      * @param flowName The name of the flow to run
      */
     protected void runFlow(String flowName) throws Exception {
-        SimpleFlowConstruct flow = lookupFlowConstruct(flowName);
+        Flow flow = lookupFlowConstruct(flowName);
         MuleEvent event = AbstractMuleTestCase.getTestEvent(null);
         MuleEvent responseEvent = flow.process(event);
     }
@@ -81,7 +81,7 @@ public class TwiMLModuleTest extends FunctionalTestCase {
      * @param expect   The expected output
      */
     protected <T> void runFlowAndExpect(String flowName, T expect) throws Exception {
-        SimpleFlowConstruct flow = lookupFlowConstruct(flowName);
+        Flow flow = lookupFlowConstruct(flowName);
         MuleEvent event = AbstractMuleTestCase.getTestEvent(null);
         MuleEvent responseEvent = flow.process(event);
 
@@ -97,7 +97,7 @@ public class TwiMLModuleTest extends FunctionalTestCase {
      * @param payload  The payload of the input event
      */
     protected <T, U> void runFlowWithPayloadAndExpect(String flowName, T expect, U payload) throws Exception {
-        SimpleFlowConstruct flow = lookupFlowConstruct(flowName);
+        Flow flow = lookupFlowConstruct(flowName);
         MuleEvent event = AbstractMuleTestCase.getTestEvent(payload);
         MuleEvent responseEvent = flow.process(event);
 
@@ -109,7 +109,7 @@ public class TwiMLModuleTest extends FunctionalTestCase {
      *
      * @param name Name of the flow to retrieve
      */
-    protected SimpleFlowConstruct lookupFlowConstruct(String name) {
-        return (SimpleFlowConstruct) AbstractMuleTestCase.muleContext.getRegistry().lookupFlowConstruct(name);
+    protected Flow lookupFlowConstruct(String name) {
+        return (Flow) AbstractMuleTestCase.muleContext.getRegistry().lookupFlowConstruct(name);
     }
 }
