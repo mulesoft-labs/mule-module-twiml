@@ -11,7 +11,7 @@
     <twiml:config/>
 
     <flow name="testSay">
-        <twiml:say voice="WOMAN">Say Hello!</twiml:say>
+        <twiml:say voice="WOMAN" text="Say Hello!"/>
     </flow>
 
     <flow name="testPlay">
@@ -20,12 +20,12 @@
 
     <flow name="testGather">
         <twiml:gather timeout="5" finishOnKey="*" numDigits="5" action-flow-ref="testOnGather">
-            <twiml:say>Please input your ZIP code</twiml:say>
+            <twiml:say text="Please input your ZIP code"/>
         </twiml:gather>
     </flow>
 
     <flow name="testOnGather">
-        <twiml:say>Thank You</twiml:say>
+        <twiml:say text="Thank You"/>
     </flow>
 
     <flow name="testRecord">
@@ -33,11 +33,11 @@
     </flow>
 
     <flow name="testOnRecord">
-        <twiml:say>Thank You for that lovely message</twiml:say>
+        <twiml:say text="Thank You for that lovely message"/>
     </flow>
 
     <flow name="testSms">
-        <twiml:sms to="+14152292004" from="+14152292004" action-flow-ref="testOnRecord">Thank You for that lovely message</twiml:sms>
+        <twiml:sms to="+14152292004" from="+14152292004" action-flow-ref="testOnRecord" text="Thank You for that lovely message"/>
     </flow>
 
     <!--
