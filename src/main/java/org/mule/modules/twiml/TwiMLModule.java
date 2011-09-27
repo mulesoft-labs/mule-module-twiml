@@ -1,9 +1,9 @@
 package org.mule.modules.twiml;
 
 import org.mule.api.annotations.Module;
-import org.mule.api.annotations.NestedProcessor;
+import org.mule.api.NestedProcessor;
 import org.mule.api.annotations.Processor;
-import org.mule.api.annotations.callback.HttpCallback;
+import org.mule.api.callback.HttpCallback;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.api.annotations.param.OutboundHeaders;
