@@ -201,6 +201,15 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <scm>
+        <connection>scm:git:git://github.com:mulesoft/mule-module-twiml.git
+        </connection>
+        <developerConnection>
+            scm:git:git@github.com:mulesoft/mule-module-twiml.git
+        </developerConnection>
+        <url>http://github.com/mulesoft/mule-module-twiml</url>
+    </scm>
+
     <distributionManagement>
         <repository>
             <id>mulesoft-releases</id>
