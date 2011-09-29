@@ -9,10 +9,10 @@
       xmlns:twiml="http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml"
       xmlns:zuora="http://repository.mulesoft.org/releases/org/mule/modules/mule-module-zuora"
       xsi:schemaLocation="
-        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.1/mule.xsd
-        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/3.1/mule-http.xsd
-        http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/3.1/mule-json.xsd
-        http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/3.1/mule-scripting.xsd
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/3.2/mule-http.xsd
+        http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/3.2/mule-json.xsd
+        http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/3.2/mule-scripting.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
         http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml/1.0/mule-twiml.xsd
@@ -39,17 +39,17 @@
         <twiml:response>
             <twiml:say>You have reached Mule iON Support Line</twiml:say>
             <twiml:gather action-flow-ref="get-account">
-                <twiml:say>Please enter your account number, followed by pound sign.</twiml:say>
+                <twiml:say text="Please enter your account number, followed by pound sign."/>
             </twiml:gather>
-            <twiml:say>Sorry I didn't recognize that. Goodbye!</twiml:say>
+            <twiml:say text="Sorry I didn't recognize that. Goodbye!"/>
         </twiml:response>
     </flow>
 
     <flow name="input-account">
         <twiml:gather action-flow-ref="get-account">
-            <twiml:say>Please enter your account number, followed by pound sign.</twiml:say>
+            <twiml:say text="Please enter your account number, followed by pound sign."/>
         </twiml:gather>
-        <twiml:say>Sorry I didn't recognize that. Goodbye!</twiml:say>
+        <twiml:say text="Sorry I didn't recognize that. Goodbye!"/>
     </flow>
 
     <flow name="get-account">
@@ -79,9 +79,9 @@
                     <twiml:say>I'm sorry I don't know any account by that number.</twiml:say>
                     <!-- <flow-ref name="input-account"/> -->
                     <twiml:gather action-flow-ref="get-account">
-                        <twiml:say>Please enter your account number, followed by pound sign.</twiml:say>
+                        <twiml:say text="Please enter your account number, followed by pound sign."/>
                     </twiml:gather>
-                    <twiml:say>Sorry I didn't recognize that. Goodbye!</twiml:say>
+                    <twiml:say text="Sorry I didn't recognize that. Goodbye!"/>
                 </twiml:response>
                 <logger level="INFO" message="#[payload]"/>
             </otherwise>

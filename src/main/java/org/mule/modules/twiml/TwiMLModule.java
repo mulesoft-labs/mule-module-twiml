@@ -37,6 +37,8 @@ public class TwiMLModule {
      * The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
      * all verb elements must be nested within this element. Any other structure is considered invalid.
      *
+     * {@sample.java ../../../doc/mule-module-twiml.java.sample twiml:response}
+     *
      * @return A TwiML-based markup document containing the response element.
      * @throws Exception
      */
