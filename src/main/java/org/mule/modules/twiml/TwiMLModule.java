@@ -300,7 +300,7 @@ public class TwiMLModule {
      * @return TwiML-based markup representing the Sms operation
      */
     @Processor
-    public String sms(HttpCallback action,
+    public String sms(@Optional HttpCallback action,
                       @Optional String from,
                       @Optional String to,
                       @Optional HttpCallback status,
@@ -308,9 +308,11 @@ public class TwiMLModule {
 
         StringBuilder builder = new StringBuilder();
         builder.append("<Sms");
-        builder.append(" action=\"");
-        builder.append(action.getUrl());
-        builder.append("\"");
+        if( action != null ) {
+            builder.append(" action=\"");
+            builder.append(action.getUrl());
+            builder.append("\"");
+        }
         if (from != null) {
             builder.append(" from=\"");
             builder.append(from);
