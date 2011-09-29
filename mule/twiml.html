@@ -377,8 +377,7 @@ Summary:
  When the dialed call ends, Twilio makes a request to the 'action' flow if provided. Call flow will continue
  using the TwiML received in response to that request.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:dial action-flow-ref="dialCallStatus"&gt;
-    415-123-4567
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:dial action-flow-ref="dialCallStatus" text="415-123-4567"&gt;
 &lt;/twiml:dial&gt;</pre></div>
  <br/></p></div>
   <div class="jd-tagdata">
@@ -545,7 +544,7 @@ Summary:
  digit is received the audio will stop playing.
  <p/>
  <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:gather action-flow-ref="myflow" timeout="5" finishOnKey="#" numDigits="4"&gt;
-    &lt;twiml:say&gt;Please enter your account number, followed by the pound sign&lt;/twiml:say&gt;
+    &lt;twiml:say text="Please enter your account number, followed by the pound sign"&gt;&lt;/twiml:say&gt;
 &lt;/twiml:gather&gt;</pre></div>
  <br/></p></div>
   <div class="jd-tagdata">
@@ -931,7 +930,9 @@ Summary:
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
- all verb elements must be nested within this element. Any other structure is considered invalid.<br/></p></div>
+ all verb elements must be nested within this element. Any other structure is considered invalid.
+
+ <br/></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
@@ -1011,7 +1012,7 @@ Summary:
       
   <div class="jd-tagdata jd-tagdescr"><p>The Say verb converts text to speech that is read back to the caller. <Say> is useful for development or saying dynamic text that is difficult to pre-record.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say voice="WOMAN" lang="ENGLISH"&gt;Hello World!&lt;/twiml:say&gt;</pre></div>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say voice="WOMAN" lang="ENGLISH" text="Hello World!"&gt;&lt;/twiml:say&gt;</pre></div>
  <br/></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
@@ -1119,7 +1120,7 @@ Summary:
       
   <div class="jd-tagdata jd-tagdescr"><p>The <Sms> verb sends an SMS message to a phone number during a phone call.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:sms&gt;Store Location: 123 Easy St&lt;/twiml:sms&gt;</pre></div>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:sms text="Store Location: 123 Easy St"&gt;&lt;/twiml:sms&gt;</pre></div>
  <br/></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
