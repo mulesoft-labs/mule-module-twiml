@@ -496,7 +496,7 @@ Summary:
             <tr class=" api apilevel-" >
                 <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
                 <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"></td>
+                <td class="jd-descrcol" width="100%">The response of this processor will be used as the inner content of the dial element.<br/></td>
             </tr>
             
             
@@ -637,7 +637,7 @@ Summary:
             <tr class=" api apilevel-" >
                 <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
                 <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i></td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the inner content of the gather element.<br/></td>
             </tr>
             
             
@@ -935,7 +935,9 @@ Summary:
   <div class="jd-tagdata jd-tagdescr"><p>The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
  all verb elements must be nested within this element. Any other structure is considered invalid.
 
- <br/></p></div>
+ <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:response&gt;
+    &lt;twiml:sms text="Store Location: 123 Easy St"&gt;&lt;/twiml:sms&gt;
+&lt;/twiml:response&gt;</pre></div></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
@@ -954,7 +956,7 @@ Summary:
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>map</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"></td>
+                    <td class="jd-descrcol" width="100%">Outbound headers<br/></td>
                 </tr>
                 
                 
@@ -972,7 +974,7 @@ Summary:
             <tr class=" api apilevel-" >
                 <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
                 <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i></td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as content for the response element<br/></td>
             </tr>
             
             
@@ -1081,7 +1083,7 @@ Summary:
             <tr class=" api apilevel-" >
                 <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
                 <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i></td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the text to say.<br/></td>
             </tr>
             
             
@@ -1181,7 +1183,7 @@ Summary:
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>status-flow-ref</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Flow to call when SMS delivery status notification is required.<br/></td>
                 </tr>
                 
                 
@@ -1211,7 +1213,7 @@ Summary:
             <tr class=" api apilevel-" >
                 <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
                 <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i></td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the content to send via SMS.<br/></td>
             </tr>
             
             

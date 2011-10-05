@@ -1021,7 +1021,7 @@ module.dial( new HttpCallback() {
         </tr>
         <tr>
           <th>nestedProcessors</td>
-          <td></td>
+          <td>The response of this processor will be used as the inner content of the dial element.</td>
         </tr>
       </table>
   </div>
@@ -1117,7 +1117,7 @@ module.gather( new HttpCallback() {
         </tr>
         <tr>
           <th>nestedProcessors</td>
-          <td></td>
+          <td>The response of this processor will be used as the inner content of the gather element.</td>
         </tr>
       </table>
   </div>
@@ -1341,17 +1341,17 @@ module.gather( new HttpCallback() {
   <div class="jd-tagdata jd-tagdescr"><p>The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
  all verb elements must be nested within this element. Any other structure is considered invalid.
 
- <h5 class="jd-tagtitle">Java Sample</h5><pre>INCLUDE_ERROR</pre></p></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>nestedProcessors</td>
-          <td></td>
+          <td>The response of this processor will be used as content for the response element</td>
         </tr>
         <tr>
           <th>map</td>
-          <td></td>
+          <td>Outbound headers</td>
         </tr>
       </table>
   </div>
@@ -1424,7 +1424,7 @@ module.say(TwiMLLanguage.ENGLISH, TwiMLVoice.WOMAIN, 1, new ProcessorCallback() 
         </tr>
         <tr>
           <th>nestedProcessors</td>
-          <td></td>
+          <td>The response of this processor will be used as the text to say.</td>
         </tr>
       </table>
   </div>
@@ -1507,11 +1507,11 @@ module.sms( new HttpCallback() {
         </tr>
         <tr>
           <th>status</td>
-          <td></td>
+          <td>Flow to call when SMS delivery status notification is required.</td>
         </tr>
         <tr>
           <th>nestedProcessors</td>
-          <td></td>
+          <td>The response of this processor will be used as the content to send via SMS.</td>
         </tr>
       </table>
   </div>
