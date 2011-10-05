@@ -39,6 +39,8 @@ public class TwiMLModule {
      *
      * {@sample.xml ../../../doc/mule-module-twiml.xml.sample twiml:response}
      *
+     * @param nestedProcessors The response of this processor will be used as content for the response element
+     * @param map Outbound headers
      * @return A TwiML-based markup document containing the response element.
      * @throws Exception
      */
@@ -65,6 +67,7 @@ public class TwiMLModule {
      * {@sample.xml ../../../doc/mule-module-twiml.xml.sample twiml:say}
      * {@sample.java ../../../doc/mule-module-twiml.java.sample twiml:say}
      *
+     * @param nestedProcessors The response of this processor will be used as the text to say.
      * @param lang  The 'language' attribute allows you pick a voice with a specific language's accent and pronunciations. Twilio currently supports languages English, Spanish, French and German. The default is 'English'.
      * @param voice The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.
      * @param loop  The 'loop' attribute specifies how many times you'd like the text repeated. The default is once. Specifying '0' will cause the the Say verb to loop until the call is hung up.
@@ -168,6 +171,7 @@ public class TwiMLModule {
      *                       the data to the 'action' flow once the caller enters that number of digits. For example, one might set
      *                       'numDigits' to '5' and ask the caller to enter a 5 digit zip code. When the caller enters the fifth digit
      *                       of '94117', Twilio will immediately submit the data to the 'action' flow.
+     * @param nestedProcessors The response of this processor will be used as the inner content of the gather element.
      * @return TwiML-based markup representing the Gather operation
      */
     @Processor
@@ -295,10 +299,12 @@ public class TwiMLModule {
      *               defaults to the called party. When sending an SMS during an outgoing call, 'from' defaults to the calling
      *               party. This number must be an SMS-capable local phone number assigned to your account. If the phone number
      *               isn't SMS-capable, then the <Sms> verb will not send an SMS message.
+     * @param status Flow to call when SMS delivery status notification is required.
      * @param to     The 'to' attribute takes a valid phone number as a value. Twilio will send an SMS message to this
      *               number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during
      *               an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.
      *               NOTE: sending to short codes is not currently supported.
+     * @param nestedProcessors The response of this processor will be used as the content to send via SMS.
      * @return TwiML-based markup representing the Sms operation
      */
     @Processor
@@ -378,6 +384,7 @@ public class TwiMLModule {
      *                     For example, an inbound caller to your Twilio number has the caller ID 1-415-123-4567. You tell Twilio to
      *                     execute a <Dial> verb to 1-858-987-6543 to handle the inbound call. The called party (1-858-987-6543) will
      *                     see 1-415-123-4567 as the caller ID on the incoming call.
+     * @param nestedProcessors The response of this processor will be used as the inner content of the dial element.
      * @return TwiML-based markup representing the Dial operation
      */
     @Processor
