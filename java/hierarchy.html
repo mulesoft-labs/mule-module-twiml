@@ -76,7 +76,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for Mule TwiML Module." />
+  <meta name="description" content="Documentation for Mule Selenium Module." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 <title>
@@ -84,7 +84,7 @@
   Class Hierarchy
 
 
-| Mule TwiML Module
+| Mule Selenium Module
 
 </title>
 <link href="../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -117,7 +117,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">Mule TwiML Module</span>
+      <span id="masthead-title">Mule Selenium Module</span>
     
     <ul id="header-tabs" class="java">
     	<li id="guide"><a href="../guide/install.html">
@@ -183,11 +183,11 @@
               <ul>
                 
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/package-summary.html">org.mule.modules.twiml</a></li>
+  <a href="../java/org/mule/modules/selenium/package-summary.html">org.mule.modules.selenium</a></li>
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/config/package-summary.html">org.mule.modules.twiml.config</a></li>
+  <a href="../java/org/mule/modules/selenium/config/package-summary.html">org.mule.modules.selenium.config</a></li>
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/config/spring/package-summary.html">org.mule.modules.twiml.config.spring</a></li>
+  <a href="../java/org/mule/modules/selenium/config/spring/package-summary.html">org.mule.modules.selenium.config.spring</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -240,13 +240,13 @@
 
 
 <table border="0" cellpadding="0" cellspacing="1">
-<th class="jd-hierarchy-data" colspan="5">Class</th>
+<th class="jd-hierarchy-data" colspan="4">Class</th>
 <th class="jd-hierarchy-data">Interfaces</th>
 
 
 <tr>
     
-    <td class="jd-hierarchy-data" colspan="5">
+    <td class="jd-hierarchy-data" colspan="4">
     
         
     
@@ -260,9 +260,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a>
+        <a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -274,9 +274,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="3">
+    <td class="jd-hierarchy-data" colspan="2">
     
-        <a href="../java/org/mule/modules/twiml/config/TwiMLModuleCapabilitiesAdapter.html">TwiMLModuleCapabilitiesAdapter</a>
+        <a href="../java/org/mule/modules/selenium/config/SeleniumModuleCapabilitiesAdapter.html">SeleniumModuleCapabilitiesAdapter</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -292,45 +292,27 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="2">
-    
-        <a href="../java/org/mule/modules/twiml/config/TwiMLModuleLifecycleAdapter.html">TwiMLModuleLifecycleAdapter</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            Disposable
-         &nbsp;&nbsp;
-    
-        
-            Initialisable
-         &nbsp;&nbsp;
-    
-        
-            Startable
-         &nbsp;&nbsp;
-    
-        
-            Stoppable
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td><td class="jd-hierarchy-spacer"></td>
     <td class="jd-hierarchy-data" colspan="1">
     
-        <a href="../java/org/mule/modules/twiml/config/TwiMLModuleHttpCallbackAdapter.html">TwiMLModuleHttpCallbackAdapter</a>
+        <a href="../java/org/mule/modules/selenium/config/SeleniumModuleLifecycleAdapter.html">SeleniumModuleLifecycleAdapter</a>
     
     </td>
     <td class="jd-hierarchy-data">
     
         
+            Disposable
+         &nbsp;&nbsp;
+    
+        
             Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
          &nbsp;&nbsp;
     
     &nbsp;
@@ -344,13 +326,11 @@
 
 
 
-
-
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/DialMessageProcessor.html">DialMessageProcessor</a>
+        <a href="../java/org/mule/modules/selenium/config/ClearMessageProcessor.html">ClearMessageProcessor</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -392,53 +372,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/GatherMessageProcessor.html">GatherMessageProcessor</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            FlowConstructAware
-         &nbsp;&nbsp;
-    
-        
-            MuleContextAware
-         &nbsp;&nbsp;
-    
-        
-            Disposable
-         &nbsp;&nbsp;
-    
-        
-            Initialisable
-         &nbsp;&nbsp;
-    
-        
-            Startable
-         &nbsp;&nbsp;
-    
-        
-            Stoppable
-         &nbsp;&nbsp;
-    
-        
-            MessageProcessor
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
-    
-        <a href="../java/org/mule/modules/twiml/config/PlayMessageProcessor.html">PlayMessageProcessor</a>
+        <a href="../java/org/mule/modules/selenium/config/ClickMessageProcessor.html">ClickMessageProcessor</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -480,53 +416,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/RecordMessageProcessor.html">RecordMessageProcessor</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            FlowConstructAware
-         &nbsp;&nbsp;
-    
-        
-            MuleContextAware
-         &nbsp;&nbsp;
-    
-        
-            Disposable
-         &nbsp;&nbsp;
-    
-        
-            Initialisable
-         &nbsp;&nbsp;
-    
-        
-            Startable
-         &nbsp;&nbsp;
-    
-        
-            Stoppable
-         &nbsp;&nbsp;
-    
-        
-            MessageProcessor
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
-    
-        <a href="../java/org/mule/modules/twiml/config/ResponseMessageProcessor.html">ResponseMessageProcessor</a>
+        <a href="../java/org/mule/modules/selenium/config/FindElementMessageProcessor.html">FindElementMessageProcessor</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -568,53 +460,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/SayMessageProcessor.html">SayMessageProcessor</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            FlowConstructAware
-         &nbsp;&nbsp;
-    
-        
-            MuleContextAware
-         &nbsp;&nbsp;
-    
-        
-            Disposable
-         &nbsp;&nbsp;
-    
-        
-            Initialisable
-         &nbsp;&nbsp;
-    
-        
-            Startable
-         &nbsp;&nbsp;
-    
-        
-            Stoppable
-         &nbsp;&nbsp;
-    
-        
-            MessageProcessor
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
-    
-        <a href="../java/org/mule/modules/twiml/config/SmsMessageProcessor.html">SmsMessageProcessor</a>
+        <a href="../java/org/mule/modules/selenium/config/FindElementsMessageProcessor.html">FindElementsMessageProcessor</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -656,32 +504,36 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/DefaultHttpCallback.html">DefaultHttpCallback</a>
+        <a href="../java/org/mule/modules/selenium/config/GetAttributeMessageProcessor.html">GetAttributeMessageProcessor</a>
     
     </td>
     <td class="jd-hierarchy-data">
     
         
-            HttpCallback
+            FlowConstructAware
          &nbsp;&nbsp;
     
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+        
+            MuleContextAware
+         &nbsp;&nbsp;
     
-        <a href="../java/org/mule/modules/twiml/config/spring/DefaultHttpCallback.FlowRefMessageProcessor.html">DefaultHttpCallback.FlowRefMessageProcessor</a>
+        
+            Disposable
+         &nbsp;&nbsp;
     
-    </td>
-    <td class="jd-hierarchy-data">
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
     
         
             MessageProcessor
@@ -696,9 +548,405 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/DialDefinitionParser.html">DialDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/GetCurrentUrlMessageProcessor.html">GetCurrentUrlMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/GetMessageProcessor.html">GetMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/GetTextMessageProcessor.html">GetTextMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/GetTitleMessageProcessor.html">GetTitleMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/IsEnabledMessageProcessor.html">IsEnabledMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/IsSelectedMessageProcessor.html">IsSelectedMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/SendKeysMessageProcessor.html">SendKeysMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/SubmitMessageProcessor.html">SubmitMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/UntilMessageProcessor.html">UntilMessageProcessor</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            FlowConstructAware
+         &nbsp;&nbsp;
+    
+        
+            MuleContextAware
+         &nbsp;&nbsp;
+    
+        
+            Disposable
+         &nbsp;&nbsp;
+    
+        
+            Initialisable
+         &nbsp;&nbsp;
+    
+        
+            Startable
+         &nbsp;&nbsp;
+    
+        
+            Stoppable
+         &nbsp;&nbsp;
+    
+        
+            MessageProcessor
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/ClearDefinitionParser.html">ClearDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -716,9 +964,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/GatherDefinitionParser.html">GatherDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/ClickDefinitionParser.html">ClickDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -736,9 +984,189 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/NestedProcessorChain.html">NestedProcessorChain</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/FindElementDefinitionParser.html">FindElementDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/FindElementsDefinitionParser.html">FindElementsDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/GetAttributeDefinitionParser.html">GetAttributeDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/GetCurrentUrlDefinitionParser.html">GetCurrentUrlDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/GetDefinitionParser.html">GetDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/GetTextDefinitionParser.html">GetTextDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/GetTitleDefinitionParser.html">GetTitleDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/IsEnabledDefinitionParser.html">IsEnabledDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/IsSelectedDefinitionParser.html">IsSelectedDefinitionParser</a>
+    
+    </td>
+    <td class="jd-hierarchy-data">
+    
+        
+            BeanDefinitionParser
+         &nbsp;&nbsp;
+    
+    &nbsp;
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td class="jd-hierarchy-spacer"></td>
+    <td class="jd-hierarchy-data" colspan="3">
+    
+        <a href="../java/org/mule/modules/selenium/config/spring/NestedProcessorChain.html">NestedProcessorChain</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -760,9 +1188,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/NestedProcessorString.html">NestedProcessorString</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/NestedProcessorString.html">NestedProcessorString</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -780,29 +1208,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/PlayDefinitionParser.html">PlayDefinitionParser</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            BeanDefinitionParser
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
-    
-        <a href="../java/org/mule/modules/twiml/config/spring/RecordDefinitionParser.html">RecordDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/SeleniumModuleConfigDefinitionParser.html">SeleniumModuleConfigDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -820,29 +1228,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/ResponseDefinitionParser.html">ResponseDefinitionParser</a>
-    
-    </td>
-    <td class="jd-hierarchy-data">
-    
-        
-            BeanDefinitionParser
-         &nbsp;&nbsp;
-    
-    &nbsp;
-    </td>
-</tr>
-
-
-
-
-<tr>
-    <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
-    
-        <a href="../java/org/mule/modules/twiml/config/spring/SayDefinitionParser.html">SayDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/SendKeysDefinitionParser.html">SendKeysDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -860,9 +1248,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/SmsDefinitionParser.html">SmsDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/SubmitDefinitionParser.html">SubmitDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">
@@ -880,9 +1268,9 @@
 
 <tr>
     <td class="jd-hierarchy-spacer"></td>
-    <td class="jd-hierarchy-data" colspan="4">
+    <td class="jd-hierarchy-data" colspan="3">
     
-        <a href="../java/org/mule/modules/twiml/config/spring/TwiMLModuleConfigDefinitionParser.html">TwiMLModuleConfigDefinitionParser</a>
+        <a href="../java/org/mule/modules/selenium/config/spring/UntilDefinitionParser.html">UntilDefinitionParser</a>
     
     </td>
     <td class="jd-hierarchy-data">

@@ -1,4 +1,4 @@
-org.mule.modules.twiml
-org.mule.modules.twiml.config
-org.mule.modules.twiml.config.spring
+org.mule.modules.selenium
+org.mule.modules.selenium.config
+org.mule.modules.selenium.config.spring
 
