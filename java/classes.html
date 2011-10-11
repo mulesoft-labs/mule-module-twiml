@@ -68,7 +68,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for Mule TwiML Module." />
+  <meta name="description" content="Documentation for Mule Selenium Module." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 <title>
@@ -76,7 +76,7 @@
   Class Index
 
 
-| Mule TwiML Module
+| Mule Selenium Module
 
 </title>
 <link href="../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -109,7 +109,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">Mule TwiML Module</span>
+      <span id="masthead-title">Mule Selenium Module</span>
     
     <ul id="header-tabs" class="java">
     	<li id="guide"><a href="../guide/install.html">
@@ -175,11 +175,11 @@
               <ul>
                 
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/package-summary.html">org.mule.modules.twiml</a></li>
+  <a href="../java/org/mule/modules/selenium/package-summary.html">org.mule.modules.selenium</a></li>
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/config/package-summary.html">org.mule.modules.twiml.config</a></li>
+  <a href="../java/org/mule/modules/selenium/config/package-summary.html">org.mule.modules.selenium.config</a></li>
     <li class="api apilevel-">
-  <a href="../java/org/mule/modules/twiml/config/spring/package-summary.html">org.mule.modules.twiml.config.spring</a></li>
+  <a href="../java/org/mule/modules/selenium/config/spring/package-summary.html">org.mule.modules.selenium.config.spring</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -227,42 +227,73 @@
 <div id="jd-content">
 
 <div class="jd-letterlist">
-    <a href="#letter_D">D</a>
+    <a href="#letter_C">C</a>
+    <a href="#letter_F">F</a>
     <a href="#letter_G">G</a>
+    <a href="#letter_I">I</a>
     <a href="#letter_N">N</a>
-    <a href="#letter_P">P</a>
-    <a href="#letter_R">R</a>
     <a href="#letter_S">S</a>
-    <a href="#letter_T">T</a>
+    <a href="#letter_U">U</a>
 </div>
 
 
 
-<h2 id="letter_D">D</h2>
+<h2 id="letter_C">C</h2>
 <table class="jd-sumtable">
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/DefaultHttpCallback.html">DefaultHttpCallback</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/ClearDefinitionParser.html">ClearDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/DefaultHttpCallback.FlowRefMessageProcessor.html">DefaultHttpCallback.FlowRefMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/ClearMessageProcessor.html">ClearMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">ClearMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#clear(org.openqa.selenium.WebElement)">clear(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
         </tr>
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/DialDefinitionParser.html">DialDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/ClickDefinitionParser.html">ClickDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/DialMessageProcessor.html">DialMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">DialMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#dial(org.mule.api.callback.HttpCallback, int, boolean, int, java.lang.String, java.util.List<org.mule.api.NestedProcessor>)">dial(org.mule.api.callback.HttpCallback, int, boolean, int, java.lang.String, java.util.List)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/ClickMessageProcessor.html">ClickMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">ClickMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#click(org.openqa.selenium.WebElement)">click(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+</table>
+
+
+<h2 id="letter_F">F</h2>
+<table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/FindElementDefinitionParser.html">FindElementDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/FindElementMessageProcessor.html">FindElementMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">FindElementMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#findElement(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">findElement(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/FindElementsDefinitionParser.html">FindElementsDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/FindElementsMessageProcessor.html">FindElementsMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">FindElementsMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#findElements(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">findElements(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
         </tr>
     
     
@@ -274,14 +305,93 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/GatherDefinitionParser.html">GatherDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/GetAttributeDefinitionParser.html">GetAttributeDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/GatherMessageProcessor.html">GatherMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">GatherMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#gather(org.mule.api.callback.HttpCallback, int, java.lang.String, java.lang.Integer, java.util.List<org.mule.api.NestedProcessor>)">gather(org.mule.api.callback.HttpCallback, int, java.lang.String, java.lang.Integer, java.util.List)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/GetAttributeMessageProcessor.html">GetAttributeMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">GetAttributeMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#getAttribute(org.openqa.selenium.WebElement, java.lang.String)">getAttribute(org.openqa.selenium.WebElement, java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/GetCurrentUrlDefinitionParser.html">GetCurrentUrlDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/GetCurrentUrlMessageProcessor.html">GetCurrentUrlMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">GetCurrentUrlMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#getCurrentUrl()">getCurrentUrl()</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/GetDefinitionParser.html">GetDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/GetMessageProcessor.html">GetMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">GetMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#get(java.lang.String)">get(java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/GetTextDefinitionParser.html">GetTextDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/GetTextMessageProcessor.html">GetTextMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">GetTextMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#getText(org.openqa.selenium.WebElement)">getText(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/GetTitleDefinitionParser.html">GetTitleDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/GetTitleMessageProcessor.html">GetTitleMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">GetTitleMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#getTitle()">getTitle()</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+</table>
+
+
+<h2 id="letter_I">I</h2>
+<table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/IsEnabledDefinitionParser.html">IsEnabledDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/IsEnabledMessageProcessor.html">IsEnabledMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">IsEnabledMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#isEnabled(org.openqa.selenium.WebElement)">isEnabled(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/IsSelectedDefinitionParser.html">IsSelectedDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/IsSelectedMessageProcessor.html">IsSelectedMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">IsSelectedMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#isSelected(org.openqa.selenium.WebElement)">isSelected(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
         </tr>
     
     
@@ -293,64 +403,14 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/NestedProcessorChain.html">NestedProcessorChain</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/NestedProcessorChain.html">NestedProcessorChain</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/NestedProcessorString.html">NestedProcessorString</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/NestedProcessorString.html">NestedProcessorString</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-</table>
-
-
-<h2 id="letter_P">P</h2>
-<table class="jd-sumtable">
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/PlayDefinitionParser.html">PlayDefinitionParser</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/PlayMessageProcessor.html">PlayMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">PlayMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#play(int, java.lang.String)">play(int, java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
-        </tr>
-    
-    
-</table>
-
-
-<h2 id="letter_R">R</h2>
-<table class="jd-sumtable">
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/RecordDefinitionParser.html">RecordDefinitionParser</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/RecordMessageProcessor.html">RecordMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">RecordMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#record(org.mule.api.callback.HttpCallback, int, java.lang.String, int, boolean, org.mule.api.callback.HttpCallback, boolean)">record(org.mule.api.callback.HttpCallback, int, java.lang.String, int, boolean, org.mule.api.callback.HttpCallback, boolean)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/ResponseDefinitionParser.html">ResponseDefinitionParser</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/ResponseMessageProcessor.html">ResponseMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">ResponseMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#response(java.util.List<org.mule.api.NestedProcessor>, java.util.Map<java.lang.String, java.lang.Object>)">response(java.util.List, java.util.Map)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
         </tr>
     
     
@@ -362,95 +422,88 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/SayDefinitionParser.html">SayDefinitionParser</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></td>
+            <td class="jd-descrcol" width="100%">Selenium WebDriver is a tool for automating testing web applications, and in particular to verify that they work as
+ expected.&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/SayMessageProcessor.html">SayMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">SayMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#say(org.mule.modules.twiml.TwiMLLanguage, org.mule.modules.twiml.TwiMLVoice, int, java.util.List<org.mule.api.NestedProcessor>)">say(org.mule.modules.twiml.TwiMLLanguage, org.mule.modules.twiml.TwiMLVoice, int, java.util.List)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/SeleniumModuleCapabilitiesAdapter.html">SeleniumModuleCapabilitiesAdapter</a></td>
+            <td class="jd-descrcol" width="100%">A <code>SeleniumModuleCapabilitiesAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code> that implements org.mule.api.Capabilities interface.&nbsp;</td>
         </tr>
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/SmsDefinitionParser.html">SmsDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/SeleniumModuleConfigDefinitionParser.html">SeleniumModuleConfigDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/SmsMessageProcessor.html">SmsMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">SmsMessageProcessor invokes the <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html#sms(org.mule.api.callback.HttpCallback, java.lang.String, java.lang.String, org.mule.api.callback.HttpCallback, java.util.List<org.mule.api.NestedProcessor>)">sms(org.mule.api.callback.HttpCallback, java.lang.String, java.lang.String, org.mule.api.callback.HttpCallback, java.util.List)</a></code> method in <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/SeleniumModuleLifecycleAdapter.html">SeleniumModuleLifecycleAdapter</a></td>
+            <td class="jd-descrcol" width="100%">A <code>SeleniumModuleLifecycleAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code> that adds lifecycle methods to the pojo.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/SeleniumModuleNamespaceHandler.html">SeleniumModuleNamespaceHandler</a></td>
+            <td class="jd-descrcol" width="100%">Registers bean definitions parsers for handling elements in <code>http://www.mulesoft.org/schema/mule/selenium</code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/SeleniumWebDriver.html">SeleniumWebDriver</a></td>
+            <td class="jd-descrcol" width="100%">List of Selenium Web drivers.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/SeleniumWebDriverEnumTransformer.html">SeleniumWebDriverEnumTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/SendKeysDefinitionParser.html">SendKeysDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/SendKeysMessageProcessor.html">SendKeysMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">SendKeysMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#sendKeys(org.openqa.selenium.WebElement, java.lang.String)">sendKeys(org.openqa.selenium.WebElement, java.lang.String)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/SubmitDefinitionParser.html">SubmitDefinitionParser</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/SubmitMessageProcessor.html">SubmitMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">SubmitMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#submit(org.openqa.selenium.WebElement)">submit(org.openqa.selenium.WebElement)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
         </tr>
     
     
 </table>
 
 
-<h2 id="letter_T">T</h2>
+<h2 id="letter_U">U</h2>
 <table class="jd-sumtable">
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/TwiMLLanguage.html">TwiMLLanguage</a></td>
-            <td class="jd-descrcol" width="100%">Voice language with a specific language's accent and pronunciations
-&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/TwiMLLanguageEnumTransformer.html">TwiMLLanguageEnumTransformer</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></td>
-            <td class="jd-descrcol" width="100%">A Mule module for generating Twilios Markup Language.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/TwiMLModuleCapabilitiesAdapter.html">TwiMLModuleCapabilitiesAdapter</a></td>
-            <td class="jd-descrcol" width="100%">A <code>TwiMLModuleCapabilitiesAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code> that implements org.mule.api.Capabilities interface.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/TwiMLModuleConfigDefinitionParser.html">TwiMLModuleConfigDefinitionParser</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/spring/UntilDefinitionParser.html">UntilDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/TwiMLModuleHttpCallbackAdapter.html">TwiMLModuleHttpCallbackAdapter</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/TwiMLModuleLifecycleAdapter.html">TwiMLModuleLifecycleAdapter</a></td>
-            <td class="jd-descrcol" width="100%">A <code>TwiMLModuleLifecycleAdapter</code> is a wrapper around <code><a href="../java/org/mule/modules/twiml/TwiMLModule.html">TwiMLModule</a></code> that adds lifecycle methods to the pojo.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/spring/TwiMLModuleNamespaceHandler.html">TwiMLModuleNamespaceHandler</a></td>
-            <td class="jd-descrcol" width="100%">Registers bean definitions parsers for handling elements in <code>http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml</code>.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/TwiMLVoice.html">TwiMLVoice</a></td>
-            <td class="jd-descrcol" width="100%">Voice gender
-&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/modules/twiml/config/TwiMLVoiceEnumTransformer.html">TwiMLVoiceEnumTransformer</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/modules/selenium/config/UntilMessageProcessor.html">UntilMessageProcessor</a></td>
+            <td class="jd-descrcol" width="100%">UntilMessageProcessor invokes the <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html#until(long, org.mule.api.NestedProcessor)">until(long, org.mule.api.NestedProcessor)</a></code> method in <code><a href="../java/org/mule/modules/selenium/SeleniumModule.html">SeleniumModule</a></code>.&nbsp;</td>
         </tr>
     
     
