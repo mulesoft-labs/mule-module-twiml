@@ -43,18 +43,18 @@
                 <version>1.4</version>
                 <extensions>true</extensions>
                 <configuration>
-					<excludeMuleDependencies>false</excludeMuleDependencies>
-					<inclusions>
-						<inclusion>
-							<groupId>org.mule.modules</groupId>
-							<artifactId>mule-module-twiml</artifactId>
-						</inclusion>
-						<inclusion>
-							<groupId>org.mule.modules</groupId>
-							<artifactId>mule-module-zuora</artifactId>
-						</inclusion>
-					</inclusions>
-				</configuration>
+                    <excludeMuleDependencies>false</excludeMuleDependencies>
+                    <inclusions>
+                        <inclusion>
+                            <groupId>org.mule.modules</groupId>
+                            <artifactId>mule-module-twiml</artifactId>
+                        </inclusion>
+                        <inclusion>
+                            <groupId>org.mule.modules</groupId>
+                            <artifactId>mule-module-zuora</artifactId>
+                        </inclusion>
+                    </inclusions>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -139,7 +139,7 @@
                         <configuration>
                             <tasks>
                                 <copy file="${project.build.directory}/${build.finalName}.zip"
-                                    todir="${env.MULE_HOME}/apps" overwrite="true"/>
+                                      todir="${env.MULE_HOME}/apps" overwrite="true"/>
                             </tasks>
                         </configuration>
                     </execution>
@@ -306,16 +306,15 @@
 
     <repositories>
         <repository>
-            <id>muleforge-repo</id>
-            <name>MuleForge Repository</name>
-            <url>http://repository.muleforge.org</url>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
-
         <repository>
-            <id>codehaus-repo</id>
-            <name>Codehaus Repository</name>
-            <url>http://dist.codehaus.org/mule/dependencies/maven2</url>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshots Repository</name>
+            <url>http://repository.mulesoft.org/snapshots/</url>
             <layout>default</layout>
         </repository>
     </repositories>

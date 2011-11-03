@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mule xmlns="http://www.mulesoft.org/schema/mule/core"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:spring="http://www.springframework.org/schema/beans"
-      xmlns:twiml="http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml"
-      xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.1/mule.xsd
-        http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml/1.0/mule-twiml.xsd">
+      xmlns:twiml="http://www.mulesoft.org/schema/mule/twiml"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
+        http://www.mulesoft.org/schema/mule/twiml http://www.mulesoft.org/schema/mule/twiml/1.0/mule-twiml.xsd">
 
     <twiml:config/>
 
@@ -39,18 +36,5 @@
     <flow name="testSms">
         <twiml:sms to="+14152292004" from="+14152292004" action-flow-ref="testOnRecord" text="Thank You for that lovely message"/>
     </flow>
-
-    <!--
-    <flow name="ivr">
-        <twiml:say>Thank you for calling MuleSoft.</twiml:say>
-        <twiml:gather timeout="6" finishOnKey="#" numDigits="8" action-flow-ref="findCase">
-            <twiml:say>Please enter your case number.</twiml:say>
-        </twiml:gather>
-    </flow>
-
-    <flow name="findCase">
-        <logger message="Searching for case #[header:INBOUND:digits]"/>
-        <twiml:
-    </flow> -->
 
 </mule>

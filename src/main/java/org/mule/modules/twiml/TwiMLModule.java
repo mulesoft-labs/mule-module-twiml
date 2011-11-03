@@ -1,12 +1,21 @@
+/**
+ * Mule TwiML Module
+ *
+ * Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+ *
+ * The software in this package is published under the terms of the CPAL v1.0
+ * license, a copy of which has been included with this distribution in the
+ * LICENSE.txt file.
+ */
 package org.mule.modules.twiml;
 
-import org.mule.api.annotations.Module;
 import org.mule.api.NestedProcessor;
+import org.mule.api.annotations.Module;
 import org.mule.api.annotations.Processor;
-import org.mule.api.callback.HttpCallback;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.api.annotations.param.OutboundHeaders;
+import org.mule.api.callback.HttpCallback;
 
 import java.util.List;
 import java.util.Map;
@@ -28,9 +37,7 @@ import java.util.Map;
  *
  * @author MuleSoft, Inc.
  */
-@Module(name = "twiml",
-        namespace = "http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml",
-        schemaLocation = "http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml/1.0/mule-twiml.xsd")
+@Module(name = "twiml")
 public class TwiMLModule {
 
     /**

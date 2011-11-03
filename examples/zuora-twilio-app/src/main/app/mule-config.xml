@@ -4,18 +4,15 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:context="http://www.springframework.org/schema/context"
       xmlns:http="http://www.mulesoft.org/schema/mule/http"
-      xmlns:json="http://www.mulesoft.org/schema/mule/json"
       xmlns:script="http://www.mulesoft.org/schema/mule/scripting"
-      xmlns:twiml="http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml"
+      xmlns:twiml="http://www.mulesoft.org/schema/mule/twiml"
       xmlns:zuora="http://repository.mulesoft.org/releases/org/mule/modules/mule-module-zuora"
-      xsi:schemaLocation="
-        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
         http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/3.2/mule-http.xsd
-        http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/3.2/mule-json.xsd
         http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/3.2/mule-scripting.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
-        http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml http://repository.mulesoft.org/releases/org/mule/modules/mule-module-twiml/1.0/mule-twiml.xsd
+        http://www.mulesoft.org/schema/mule/twiml http://www.mulesoft.org/schema/mule/twiml/1.0/mule-twiml.xsd
         http://repository.mulesoft.org/releases/org/mule/modules/mule-module-zuora http://repository.mulesoft.org/releases/org/mule/modules/mule-module-zuora/1.0/mule-zuora.xsd">
 
     <description>
