@@ -111,15 +111,19 @@
       <span id="masthead-title">Mule TwiML Module</span>
     
     <ul id="header-tabs" class="mule">
+    
     	<li id="guide"><a href="../guide/install.html">
 	    	<span class="en">Install Guide</span>
     	</a></li>
+    
     	<li id="java"><a href="../java/packages.html">
-	    	<span class="en">Java API</span>
+	    	<span class="en">Java API Reference</span>
     	</a></li>
+    
     	<li id="mule"><a href="../mule/modules.html">
-	    	<span class="en">Mule API</span>
+	    	<span class="en">Mule API Reference</span>
     	</a></li>
+    
     </ul>
     </div>
     <div id="headerRight">
@@ -233,7 +237,7 @@ Summary:
  to build complex interactive voice applications.
  <p/>
  Outgoing calls are controlled in the same manner as incoming calls using TwiML. The initial flow for the call is
- provided as a parameter to the Twilio Cloud Connector.<br/></p>
+ provided as a parameter to the Twilio Cloud Connector.</p>
 
 
 </div><!-- jd-descr -->
@@ -353,6 +357,8 @@ Summary:
 
 
 
+
+
 <!-- ========= MESSAGE PROCESSOR DETAIL ======== -->
 <!-- Message Processors -->
 
@@ -380,16 +386,18 @@ Summary:
  When the dialed call ends, Twilio makes a request to the 'action' flow if provided. Call flow will continue
  using the TwiML received in response to that request.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:dial action-flow-ref="dialCallStatus" text="415-123-4567"&gt;
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:dial action-flow-ref="dialCallStatus" text="415-123-4567"&gt;
 &lt;/twiml:dial&gt;</pre></div>
- <br/></p></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
@@ -403,7 +411,7 @@ Summary:
                      <p/>
                      If no 'action' is provided, Dial will finish and Twilio will move on to the next TwiML verb in the document. If
                      there is no next verb, Twilio will end the phone call. Note that this is different from the behavior of
-                     <Record> and <Gather>.<br/></td>
+                     <Record> and <Gather>.</td>
                 </tr>
                 
                 
@@ -414,7 +422,7 @@ Summary:
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'timeout' attribute sets the limit in seconds that <Dial> waits for the called party to
                      answer the call. Basically, how long should Twilio let the call ring before giving up and reporting 'no-answer'
-                     as the 'DialCallStatus'.<br/></td>
+                     as the 'DialCallStatus'.</td>
                 </tr>
                 
                 
@@ -429,7 +437,7 @@ Summary:
                      without having to hang up her phone and ending her TwiML processing session. When the caller presses '*' Twilio
                      will hang up on the called party. If an 'action' URL was provided, Twilio submits 'completed' as the
                      'DialCallStatus' to the URL and processes the response. If no 'action' was provided Twilio will continue on to
-                     the next verb in the current TwiML document.<br/></td>
+                     the next verb in the current TwiML document.</td>
                 </tr>
                 
                 
@@ -440,7 +448,7 @@ Summary:
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'timeLimit' attribute sets the maximum duration of the <Dial> in seconds. For example, by
                      setting a time limit of 120 seconds <Dial> will hang up on the called party automatically two minutes into
-                     the phone call. By default, there is a four hour time limit set on calls.<br/></td>
+                     the phone call. By default, there is a four hour time limit set on calls.</td>
                 </tr>
                 
                 
@@ -455,7 +463,7 @@ Summary:
                      <p/>
                      For example, an inbound caller to your Twilio number has the caller ID 1-415-123-4567. You tell Twilio to
                      execute a <Dial> verb to 1-858-987-6543 to handle the inbound call. The called party (1-858-987-6543) will
-                     see 1-415-123-4567 as the caller ID on the incoming call.<br/></td>
+                     see 1-415-123-4567 as the caller ID on the incoming call.</td>
                 </tr>
                 
                 
@@ -463,20 +471,12 @@ Summary:
                 
           
           
-            <tr class="alt-color api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -490,11 +490,7 @@ Summary:
             
           
             
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
-                <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%">The response of this processor will be used as the inner content of the dial element.<br/></td>
-            </tr>
+            <tr><th colspan="12"><nobr>&lt;twiml:nestedProcessors&gt;</nobr></br><span style="font-weight: normal;">The response of this processor will be used as the inner content of the dial element.</span></th></tr>
             
             
           
@@ -504,8 +500,10 @@ Summary:
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
       <ul class="nolist"><li>TwiML-based markup representing the Dial operation
-<br/></li></ul>
+</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
@@ -543,17 +541,19 @@ Summary:
  you to read menu options to the caller while letting her enter a menu selection at any time. After the first
  digit is received the audio will stop playing.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:gather action-flow-ref="myflow" timeout="5" finishOnKey="#" numDigits="4"&gt;
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:gather action-flow-ref="myflow" timeout="5" finishOnKey="#" numDigits="4"&gt;
     &lt;twiml:say text="Please enter your account number, followed by the pound sign"&gt;&lt;/twiml:say&gt;
 &lt;/twiml:gather&gt;</pre></div>
- <br/></p></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
@@ -561,7 +561,7 @@ Summary:
                     <td class="jd-linkcol"><nobr>action-flow-ref</nobr></td>
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%">When the caller has finished entering digits Twilio will make a GET request to this flow including
-                       a Digits variable which represent the digits the caller pressed, excluding the finishOnKey digit if used.<br/></td>
+                       a Digits variable which represent the digits the caller pressed, excluding the finishOnKey digit if used.</td>
                 </tr>
                 
                 
@@ -574,7 +574,7 @@ Summary:
                        moving on and making a request to the 'action' flow. For example, if 'timeout' is
                        '10', Twilio will wait ten seconds for the caller to press another key before submitting the previously entered
                        digits to the 'action' flow. Twilio waits until completing the execution of all nested verbs before beginning
-                       the timeout period.<br/></td>
+                       the timeout period.</td>
                 </tr>
                 
                 
@@ -585,7 +585,7 @@ Summary:
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'finishOnKey' attribute lets you choose one value that submits the received data when
                        entered. For example, if you set 'finishOnKey' to '#' and the user enters '1234#', Twilio will immediately
-                       stop waiting for more input when the '#' is received and will submit "Digits=1234" to the 'action' flow.<br/></td>
+                       stop waiting for more input when the '#' is received and will submit "Digits=1234" to the 'action' flow.</td>
                 </tr>
                 
                 
@@ -597,7 +597,7 @@ Summary:
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'numDigits' attribute lets you set the number of digits you are expecting, and submits
                        the data to the 'action' flow once the caller enters that number of digits. For example, one might set
                        'numDigits' to '5' and ask the caller to enter a 5 digit zip code. When the caller enters the fifth digit
-                       of '94117', Twilio will immediately submit the data to the 'action' flow.<br/></td>
+                       of '94117', Twilio will immediately submit the data to the 'action' flow.</td>
                 </tr>
                 
                 
@@ -605,20 +605,12 @@ Summary:
                 
           
           
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -630,11 +622,7 @@ Summary:
             
           
             
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
-                <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the inner content of the gather element.<br/></td>
-            </tr>
+            <tr><th colspan="12"><nobr>&lt;twiml:nestedProcessors&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>The response of this processor will be used as the inner content of the gather element.</span></th></tr>
             
             
           
@@ -644,8 +632,10 @@ Summary:
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
       <ul class="nolist"><li>TwiML-based markup representing the Gather operation
-<br/></li></ul>
+</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
@@ -690,22 +680,24 @@ Summary:
  rates to low bit rates.</li>
  </ul>
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:play file="http://myapp.muleion.com/file.mp3"/&gt;</pre></div>
- <br/></p></div>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:play file="http://myapp.muleion.com/file.mp3"/&gt;</pre></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>loop</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'loop' attribute specifies how many times the audio file is played. The default behavior is to play the audio once. Specifying '0' will cause the the <Play> verb to loop until the call is hung up.<br/></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'loop' attribute specifies how many times the audio file is played. The default behavior is to play the audio once. Specifying '0' will cause the the <Play> verb to loop until the call is hung up.</td>
                 </tr>
                 
                 
@@ -714,26 +706,18 @@ Summary:
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>file</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%">Audio file to play<br/></td>
+                    <td class="jd-descrcol" width="100%">Audio file to play</td>
                 </tr>
                 
                 
           
           
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -746,8 +730,10 @@ Summary:
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
       <ul class="nolist"><li>TwiML-based markup representing the Play operation
-<br/></li></ul>
+</li></ul>
   </div>
+    
+  
 
     </div>
 </div>
@@ -770,16 +756,18 @@ Summary:
  recording. You can optionally generate text transcriptions of recorded calls by setting the 'transcribe'
  attribute of the <Record> verb to 'true'.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say&gt;Please leave a message at the beep&lt;/twiml:say&gt;
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say&gt;Please leave a message at the beep&lt;/twiml:say&gt;
 &lt;twiml:record action-flow-ref="myflow" maxLength="20" finishOnKey="*"/&gt;</pre></div>
- <br/></p></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
@@ -790,7 +778,7 @@ Summary:
                          Twilio will make a request to this flow. After making this request, Twilio will continue the current call using
                          the TwiML received in your response. There is one exception: if Twilio receives an empty recording, it will
                          not make a request to the 'action' URL. The current call flow will continue with the next verb in the
-                         current TwiML document.<br/></td>
+                         current TwiML document.</td>
                 </tr>
                 
                 
@@ -800,7 +788,7 @@ Summary:
                     <td class="jd-linkcol"><nobr>timeout</nobr></td>
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'timeout' attribute tells Twilio to end the recording after a number of seconds of silence
-                         has passed. The default is 5 seconds.<br/></td>
+                         has passed. The default is 5 seconds.</td>
                 </tr>
                 
                 
@@ -813,7 +801,7 @@ Summary:
                          entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', Twilio will immediately
                          stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the
                          'action' flow. The allowed values are the digits 0-9, '#' and '*'. The default is '1234567890*#' (i.e. any key
-                         will end the recording). Unlike <Gather>, you may specify more than one character as a 'finishOnKey' value.<br/></td>
+                         will end the recording). Unlike <Gather>, you may specify more than one character as a 'finishOnKey' value.</td>
                 </tr>
                 
                 
@@ -825,7 +813,7 @@ Summary:
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'maxLength' attribute lets you set the maximum length for the recording in seconds. If
                          you set 'maxLength' to '30', the recording will automatically end after 30 seconds of recorded time has
                          elapsed. This defaults to 3600 seconds (one hour) for a normal recording and 120 seconds (two minutes) for
-                         a transcribed recording.<br/></td>
+                         a transcribed recording.</td>
                 </tr>
                 
                 
@@ -837,7 +825,7 @@ Summary:
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'transcribe' attribute tells Twilio that you would like a text representation of
                          the audio of the recording. Twilio will pass this recording to our speech-to-text engine and attempt to
                          convert the audio to human readable text. The 'transcribe' option is off by default. If you do not wish to
-                         perform transcription, simply do not include the transcribe attribute.<br/></td>
+                         perform transcription, simply do not include the transcribe attribute.</td>
                 </tr>
                 
                 
@@ -848,7 +836,7 @@ Summary:
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'transcribeCallback' attribute is used in conjunction with the 'transcribe' attribute. It
                          allows you to specify a flow to which Twilio will make an asynchronous request when the transcription is
-                         complete.<br/></td>
+                         complete.</td>
                 </tr>
                 
                 
@@ -858,26 +846,18 @@ Summary:
                     <td class="jd-linkcol"><nobr>playBeep</nobr></td>
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'playBeep' attribute allows you to toggle between playing a sound before the start of a
-                         recording. If you set the value to 'false', no beep sound will be played.<br/></td>
+                         recording. If you set the value to 'false', no beep sound will be played.</td>
                 </tr>
                 
                 
           
           
-            <tr class="alt-color api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -899,8 +879,10 @@ Summary:
   
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
-      <ul class="nolist"><li>TwiML-based markup representing the Record operation<br/></li></ul>
+      <ul class="nolist"><li>TwiML-based markup representing the Record operation</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
@@ -931,55 +913,41 @@ Summary:
   <div class="jd-tagdata jd-tagdescr"><p>The root element of Twilio's XML Markup is the <Response> element. In any TwiML response to a Twilio request,
  all verb elements must be nested within this element. Any other structure is considered invalid.
 
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:response&gt;
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:response&gt;
     &lt;twiml:sms text="Store Location: 123 Easy St"&gt;&lt;/twiml:sms&gt;
 &lt;/twiml:response&gt;</pre></div></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
           
                 
-                <tr class=" api apilevel-" >
-                    <td class="jd-linkcol"><nobr>map</nobr></td>
-                    <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%">Outbound headers<br/></td>
-                </tr>
-                
-                
           
           
-            <tr class="alt-color api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
-                <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as content for the response element<br/></td>
-            </tr>
+            <tr><th colspan="12"><nobr>&lt;twiml:nestedProcessors&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>The response of this processor will be used as content for the response element</span></th></tr>
             
             
           
+            
+            <tr><th colspan="12"><nobr>&lt;twiml:map&gt;</nobr></br><span style="font-weight: normal;">Outbound headers</span></th></tr>
+            
             
           
       </table>
@@ -987,8 +955,10 @@ Summary:
   
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
-      <ul class="nolist"><li>A TwiML-based markup document containing the response element.<br/></li></ul>
+      <ul class="nolist"><li>A TwiML-based markup document containing the response element.</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
@@ -1018,22 +988,24 @@ Summary:
       
   <div class="jd-tagdata jd-tagdescr"><p>The Say verb converts text to speech that is read back to the caller. <Say> is useful for development or saying dynamic text that is difficult to pre-record.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say voice="WOMAN" lang="ENGLISH" text="Hello World!"&gt;&lt;/twiml:say&gt;</pre></div>
- <br/></p></div>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:say voice="WOMAN" lang="ENGLISH" text="Hello World!"&gt;&lt;/twiml:say&gt;</pre></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>lang</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'language' attribute allows you pick a voice with a specific language's accent and pronunciations. Twilio currently supports languages English, Spanish, French and German. The default is 'English'.<br/></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'language' attribute allows you pick a voice with a specific language's accent and pronunciations. Twilio currently supports languages English, Spanish, French and German. The default is 'English'.</td>
                 </tr>
                 
                 
@@ -1042,7 +1014,7 @@ Summary:
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>voice</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.<br/></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.</td>
                 </tr>
                 
                 
@@ -1051,7 +1023,7 @@ Summary:
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>loop</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'loop' attribute specifies how many times you'd like the text repeated. The default is once. Specifying '0' will cause the the Say verb to loop until the call is hung up.<br/></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'loop' attribute specifies how many times you'd like the text repeated. The default is once. Specifying '0' will cause the the Say verb to loop until the call is hung up.</td>
                 </tr>
                 
                 
@@ -1059,20 +1031,12 @@ Summary:
                 
           
           
-            <tr class="alt-color api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -1082,11 +1046,7 @@ Summary:
             
           
             
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
-                <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the text to say.<br/></td>
-            </tr>
+            <tr><th colspan="12"><nobr>&lt;twiml:nestedProcessors&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>The response of this processor will be used as the text to say.</span></th></tr>
             
             
           
@@ -1096,8 +1056,10 @@ Summary:
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
       <ul class="nolist"><li>TwiML-based markup representing the Say operation
-<br/></li></ul>
+</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
@@ -1127,15 +1089,17 @@ Summary:
       
   <div class="jd-tagdata jd-tagdescr"><p>The <Sms> verb sends an SMS message to a phone number during a phone call.
  <p/>
- <br/><div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:sms text="Store Location: 123 Easy St"&gt;&lt;/twiml:sms&gt;</pre></div>
- <br/></p></div>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;twiml:sms text="Store Location: 123 Easy St"&gt;&lt;/twiml:sms&gt;</pre></div>
+ </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
-      <table class="jd-tagtable">
-      <td class="jd-linkcol"><nobr>config-ref</nobr></td>
-      <td class="jd-descrcol"></td>
-      <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
           
           
                 
@@ -1144,7 +1108,7 @@ Summary:
                     <td class="jd-descrcol"></td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'action' attribute takes a flow as an argument. After processing the <Sms> verb, Twilio
                will call this flow with the inbound headers 'SmsStatus' and 'SmsSid'. Using an 'action' flow, your application
-               can receive synchronous notification that the message was successfully enqueued.<br/></td>
+               can receive synchronous notification that the message was successfully enqueued.</td>
                 </tr>
                 
                 
@@ -1157,7 +1121,7 @@ Summary:
                number that you've purchased from or ported to Twilio. When sending an SMS during an incoming call, 'from'
                defaults to the called party. When sending an SMS during an outgoing call, 'from' defaults to the calling
                party. This number must be an SMS-capable local phone number assigned to your account. If the phone number
-               isn't SMS-capable, then the <Sms> verb will not send an SMS message.<br/></td>
+               isn't SMS-capable, then the <Sms> verb will not send an SMS message.</td>
                 </tr>
                 
                 
@@ -1169,7 +1133,7 @@ Summary:
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The 'to' attribute takes a valid phone number as a value. Twilio will send an SMS message to this
                number. When sending an SMS during an incoming call, 'to' defaults to the caller. When sending an SMS during
                an outgoing call, 'to' defaults to the called party. The value of 'to' must be a valid phone number.
-               NOTE: sending to short codes is not currently supported.<br/></td>
+               NOTE: sending to short codes is not currently supported.</td>
                 </tr>
                 
                 
@@ -1178,7 +1142,7 @@ Summary:
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>status-flow-ref</nobr></td>
                     <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Flow to call when SMS delivery status notification is required.<br/></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Flow to call when SMS delivery status notification is required.</td>
                 </tr>
                 
                 
@@ -1186,20 +1150,12 @@ Summary:
                 
           
           
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
-                <td class="jd-descrcol">1</td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
-            </tr>
-            
           
-        
-      </table>
+        </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Child Elements</h5>
-
-      <table class="jd-tagtable">
+        <table id="lconfig" class="jd-sumtable">
           
           
             
@@ -1211,11 +1167,7 @@ Summary:
             
           
             
-            <tr class=" api apilevel-" >
-                <td class="jd-linkcol"><nobr>nestedProcessors</nobr></td>
-                <td class="jd-descrcol"></td>
-                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The response of this processor will be used as the content to send via SMS.<br/></td>
-            </tr>
+            <tr><th colspan="12"><nobr>&lt;twiml:nestedProcessors&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>The response of this processor will be used as the content to send via SMS.</span></th></tr>
             
             
           
@@ -1225,8 +1177,10 @@ Summary:
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Return Payload</h5>
       <ul class="nolist"><li>TwiML-based markup representing the Sms operation
-<br/></li></ul>
+</li></ul>
   </div>
+    
+  
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Exception Payload</h5>
       <table class="jd-tagtable">
