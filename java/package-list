@@ -1,4 +1,7 @@
 org.mule.modules.twiml
+org.mule.modules.twiml.adapters
 org.mule.modules.twiml.config
 org.mule.modules.twiml.config.spring
+org.mule.modules.twiml.processors
+org.mule.modules.twiml.transformers
 
