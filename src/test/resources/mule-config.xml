@@ -2,8 +2,8 @@
 <mule xmlns="http://www.mulesoft.org/schema/mule/core"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:twiml="http://www.mulesoft.org/schema/mule/twiml"
-      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
-        http://www.mulesoft.org/schema/mule/twiml http://www.mulesoft.org/schema/mule/twiml/1.0/mule-twiml.xsd">
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/twiml http://www.mulesoft.org/schema/mule/twiml/current/mule-twiml.xsd">
 
     <twiml:config/>
 
