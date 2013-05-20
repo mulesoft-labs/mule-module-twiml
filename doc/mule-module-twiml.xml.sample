@@ -1,6 +1,6 @@
 <!-- BEGIN_INCLUDE(twiml:response) -->
 <twiml:response>
-    <twiml:sms text="Store Location: 123 Easy St"></twiml:sms>
+    <twiml:sms text="Store Location: 123 Easy St"/>
 </twiml:response>
 <!-- END_INCLUDE(twiml:response) -->
 <!-- BEGIN_INCLUDE(twiml:say) -->
@@ -19,7 +19,7 @@
 <twiml:record action-flow-ref="myflow" maxLength="20" finishOnKey="*"/>
 <!-- END_INCLUDE(twiml:record) -->
 <!-- BEGIN_INCLUDE(twiml:sms) -->
-<twiml:sms text="Store Location: 123 Easy St"></twiml:sms>
+<twiml:sms text="Store Location: 123 Easy St"/>
 <!-- END_INCLUDE(twiml:sms) -->
 <!-- BEGIN_INCLUDE(twiml:dial) -->
 <twiml:dial action-flow-ref="dialCallStatus" text="415-123-4567">

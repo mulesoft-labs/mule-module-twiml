@@ -8,7 +8,7 @@
     <twiml:config/>
 
     <flow name="testSay">
-        <twiml:say voice="WOMAN" text="Say Hello!"/>
+        <twiml:say voice="WOMAN" text="Say Hello!"></twiml:say>
     </flow>
 
     <flow name="testPlay">
@@ -34,7 +34,13 @@
     </flow>
 
     <flow name="testSms">
-        <twiml:sms to="+14152292004" from="+14152292004" action-flow-ref="testOnRecord" text="Thank You for that lovely message"/>
+        <twiml:sms to="+14152292004" from="+14152292004" text="Thank You for that lovely message"/>
+    </flow>
+
+    <flow name="testSms2">
+        <twiml:response>
+            <twiml:sms text="Thank You for that lovely message"/>
+        </twiml:response>
     </flow>
 
 </mule>

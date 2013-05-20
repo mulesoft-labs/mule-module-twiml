@@ -9,13 +9,14 @@
  */
 package org.mule.modules.twiml;
 
-import org.junit.Test;
 import org.mule.api.MuleContext;
 import org.mule.api.MuleEvent;
 import org.mule.construct.Flow;
 import org.mule.tck.AbstractMuleTestCase;
 import org.mule.tck.FunctionalTestCase;
 import org.mule.transport.http.HttpConnector;
+
+import org.junit.Test;
 
 public class TwiMLModuleTest extends FunctionalTestCase {
 
@@ -34,6 +35,16 @@ public class TwiMLModuleTest extends FunctionalTestCase {
     @Test
     public void testSay() throws Exception {
         runFlowAndExpect("testSay", "<Say voice=\"woman\" loop=\"1\">Say Hello!</Say>");
+    }
+
+    @Test
+    public void testSms() throws Exception {
+        runFlowAndExpect("testSms", "<Sms from=\"+14152292004\" to=\"+14152292004\">Thank You for that lovely message</Sms>");
+    }
+
+    @Test
+    public void testSms2() throws Exception {
+        runFlowAndExpect("testSms2", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n<Sms>Thank You for that lovely message</Sms>\n</Response>");
     }
 
     @Test

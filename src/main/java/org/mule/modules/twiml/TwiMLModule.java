@@ -49,7 +49,7 @@ public class TwiMLModule {
      * @param nestedProcessors The response of this processor will be used as content for the response element
      * @param map Outbound headers
      * @return A TwiML-based markup document containing the response element.
-     * @throws Exception
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String response(@Optional List<NestedProcessor> nestedProcessors, @OutboundHeaders Map<String, Object> map) throws Exception {
@@ -79,6 +79,7 @@ public class TwiMLModule {
      * @param voice The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.
      * @param loop  The 'loop' attribute specifies how many times you'd like the text repeated. The default is once. Specifying '0' will cause the the Say verb to loop until the call is hung up.
      * @return TwiML-based markup representing the Say operation
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String say(@Optional TwiMLLanguage lang,
@@ -180,6 +181,7 @@ public class TwiMLModule {
      *                       of '94117', Twilio will immediately submit the data to the 'action' flow.
      * @param nestedProcessors The response of this processor will be used as the inner content of the gather element.
      * @return TwiML-based markup representing the Gather operation
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String gather(HttpCallback action,
@@ -251,7 +253,7 @@ public class TwiMLModule {
      * @param playBeep         The 'playBeep' attribute allows you to toggle between playing a sound before the start of a
      *                         recording. If you set the value to 'false', no beep sound will be played.
      * @return TwiML-based markup representing the Record operation
-     * @throws Exception
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String record(HttpCallback action,
@@ -313,6 +315,7 @@ public class TwiMLModule {
      *               NOTE: sending to short codes is not currently supported.
      * @param nestedProcessors The response of this processor will be used as the content to send via SMS.
      * @return TwiML-based markup representing the Sms operation
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String sms(@Optional HttpCallback action,
@@ -343,6 +346,7 @@ public class TwiMLModule {
             builder.append(status.getUrl());
             builder.append("\"");
         }
+        builder.append(">");
 
         for( NestedProcessor nestedProcessor : nestedProcessors ) {
             builder.append(nestedProcessor.process().toString());
@@ -393,6 +397,7 @@ public class TwiMLModule {
      *                     see 1-415-123-4567 as the caller ID on the incoming call.
      * @param nestedProcessors The response of this processor will be used as the inner content of the dial element.
      * @return TwiML-based markup representing the Dial operation
+     * @throws Exception is bubbled up from processing any nested elements
      */
     @Processor
     public String dial(@Optional HttpCallback action,
