@@ -40,7 +40,7 @@ Add the connector's maven repo to your pom.xml:
             <name>MuleForge Snapshot Repository</name>
             <url>https://repository.mulesoft.org/snapshots/</url>
             <layout>default</layout>
-        </repsitory>
+        </repository>
     </repositories>
 
 Add the connector as a dependency to your project. This can be done by adding
